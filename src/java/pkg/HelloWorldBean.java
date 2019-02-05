@@ -25,6 +25,7 @@ package pkg;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
+import javax.validation.constraints.Size;
 
 /**
  *
@@ -33,6 +34,7 @@ import javax.inject.Named;
 @Named
 @ApplicationScoped
 public class HelloWorldBean {
+    @Size(min = 3, message = "At least 3 characters")
     private String name;
 
     public String getName() {
